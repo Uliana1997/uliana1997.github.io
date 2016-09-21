@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang=ru>
+
+<head>
+	<meta charset=UTF-8>
+	<title>Регистрация</title>
+</head>
+
+
+<body>
+<p align=center><span class=headline><strong>Регистрация</strong></span></p><br>
+
+
+<table cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+	<tbody>
+		<tr>
+		<td bgColor=#cccccc>
+<table cellSpacing=1 cellPadding=4 width="100%" border=0>
+	<tbody>
+		<tr align=middle bgColor=#ffffe6>
+			<td colspan=3><font size=2><span class=Header><strong><span class=Header>Адрес и пароль</span></strong></span></font></td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>(<font color=red>*</font>)&nbsp;E-mail:</td>
+			<td width=30%><nobr><input type="text" name=email value="">&nbsp;<strong>@e1.ru</strong></nobr></td>
+			<td width=50%>
+			Вы можете выбрать любое имя, длиной от 5 до 16 символов и состоящее из латинских букв, цифр, знака подчеркивания ("_") или знака минус ("-"). Имя ящика не может начинаться с символов минус ("-") или знака подчеркивания ("_") и не может заканчиваться символом минус ("-"). В адресе недопустимы последовательности символов два минуса ("--").	</td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>(<font color=red>*</font>)&nbsp;Пароль:</td>
+			<td width=30%><input type="password" name=pwd value=""></td>
+			<td width=50% rowspan=2 valign=top>Пароль должен быть не менее 8 символов, состоять из цифр и английских букв, знаков подчеркивания ("_") или минус ("-"). Пароли не стоит записывать на бумажке и наклеивать на монитор.</td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>(<font color=red>*</font>)&nbsp;Повторите пароль:</td>
+			<td width=30%><input type="password" name=pwd1 value=""></td>
+		</tr>
+		<tr align=middle bgColor=#ffffe6>
+			<td colspan=3><font size=2><span class=Header><strong><span class=Header>Если Вы забудете пароль</span></strong></span></font></td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>(<font color=red>*</font>)&nbsp;Выберите вопрос</td>
+			<td width=30%><select name=forg_quest_id>
+				<option value=0>--Выберите вопрос--</option>
+				<option value=1 >Девичья фамилия Вашей мамы</option>
+				<option value=2 >Номер паспорта</option>
+				<option value=3 >Кличка домашнего животного</option>
+				<option value=4 >Любимый цвет</option></select></td>
+			<td width=50% valign=top rowspan=3>Не забывайте вопрос и ответ!</td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>Или задайте свой:</td>
+			<td width=30%><input type="text" name=forg_quest value=""></td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>(<font color=red>*</font>)&nbsp;Ответ:</td>
+			<td width=30%><input type="text" name=forg_ans value=""></td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>Запасной E-mail:</td>
+			<td width=30%><input type="text" name=forg_email value=""></td>
+			<td width=50%>На этот e-mail мы вышлем Вам пароль, если Вы его забудете</td>
+		</tr>
+		<tr align=middle bgColor=#ffffe6>
+			<td colspan=3><font size=2><span class=Header><strong><span class=Header>Информация о пользователе</span></strong></span></font></td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>(<font color=red>*</font>)&nbsp;Имя:</td>
+			<td width=30%><input type="text" name=firstname value=""></td>
+			<td width=50%>&nbsp;</td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td width=20%>(<font color=red>*</font>)&nbsp;Фамилия:</td>
+			<td width=30%><input type="text" name=lastname value=""></td>
+		</tr>
+		<tr align=middle bgColor=#ffffe6>
+			<td colspan=3><font size=2><span class=Header><strong><span class=Header>Соглашение об использовании</span></strong></span></font></td>
+		</tr>
+		<tr align=left bgColor=#f3f3f3>
+			<td colspan=3>
+			<div align="center"><input type="checkbox" name="agree" value="1" >Я прочитал и согласен с <a href="https://www.yandex.ru">Пользовательским соглашением</a>, а также с <a href="https://www.yandex.ru">Политикой конфиденциальности</a> портала E1.RU.</div></td>
+		</tr>
+	</tbody>
+	</tbody>
+</table>
+</table>
+</body>
