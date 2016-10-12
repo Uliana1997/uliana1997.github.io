@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Прямоугольники|Ульяна</title>
+		<script >
+		function getRects()
+{
+	for (var i = 1; i <= 110; i++)
+	{
+		var element = document.createElement("div");
+		var width = Math.random() * 20;
+		var height = Math.random() * 20;
+		var X = Math.random() * (window.innerWidth - width - 10) + 10;
+		var Y = Math.random() * (window.innerHeight - height - 10) + 10;
+		var a = Math.random();
+		var b = Math.random();
+		var velocity = Math.random() * 5;
+		var frequency = Math.random() * 49 + 1;
+		element.style.width = width + "px";
+		element.style.height = height + "px";
+		element.style.position = "absolute";
+		element.style.backgroundColor = "rgb(" + Math.round(Math.random() * 256) + "," +Math.round(Math.random() * 256) + "," + Math.round(Math.random() * 256) + ")";
+		element.width = width;
+		element.height = height;
+		element.k = X;
+		element.m = Y;
+		element.x = X;
+		element.y = Y;
+		element.a = a;
+		element.b = b;
+		element.style.left = X + "px";
+		element.style.top = Y + "px";
+		element.velocity = velocity
+		document.body.appendChild(element);
+		window.setInterval(move, frequency, element);
+	}
+}
+
+function move(rect)
+{
+	if (rect.x <= 0 || rect.x + rect.width >= window.innerWidth)
+	{
+		rect.a = rect.k;
+		rect.b = rect.m + 2 * (rect.y - rect.m);
+		rect.k = rect.x;
+		rect.m = rect.y;
+	}
+	if (rect.y <= 0 || rect.y + rect.height >= window.innerHeight)
+	{
+		rect.b = rect.m;
+		rect.a = rect.k + 2 * (rect.x - rect.k);
+		rect.k = rect.x;
+		rect.m = rect.y;
+	}
+	rect.x += rect.k <= rect.a ? rect.velocity : -rect.velocity;
+	rect.y += rect.m <= rect.b ? rect.velocity : -rect.velocity;
+	if (rect.x + rect.width > window.innerWidth + rect.velocity
+					|| rect.y + rect.height > window.innerHeight + rect.velocity
+					|| rect.x < -rect.velocity || rect.y < -rect.velocity)
+	{
+		document.body.removeChild(rect);
+	}
+	if (rect.x + rect.width > window.innerWidth)
+	{
+		rect.x -= rect.velocity - 1;
+	}
+	if (rect.y + rect.height > window.innerHeight)
+	{
+		rect.y -= rect.velocity - 1;
+	}
+	rect.style.left = rect.x + "px";
+	rect.style.top = rect.y + "px";
+}
+		</script>
+	</head>
+	<body onload="getRects();">
+	</body>
+</html>
