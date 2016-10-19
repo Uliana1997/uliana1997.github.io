@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru" onkeypress="go(event)">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Homework | 5
+        </title>
+        <script>
+            arr = []
+            function go(e) {
+                arr.push(e.keyCode);
+                console.info(arr);
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr.length >= 6 &&
+                        (arr[i] === 85 || arr[i] === 117)&&
+                        (arr[i+1] === 76 || arr[i+1] === 108)&&
+                        (arr[i+2] === 73 || arr[i+2] === 105) &&
+                        (arr[i+3] === 65 || arr[i+3] === 97)&&
+                        (arr[i+4] === 78 || arr[i+4] === 110)&&
+                        (arr[i+5] === 65 || arr[i+5] === 97)) {
+                        document.getElementById('play').play();
+                        document.getElementById('play').volume = 1;
+                    }
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <audio id="play" src="1.mp3"></audio>
+        <h1>Введите ULIANA</h1>
+    </body>
+</html>
